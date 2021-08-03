@@ -1,0 +1,40 @@
+header {
+    width: 100%;
+    background-color: burlywood;
+    display: flex;
+    justify-content: space-between;
+    padding: .5em;
+    overflow: hidden;
+}
+
+header ul {
+    list-style: none;
+    margin: 0em;
+}
+
+header ul li {
+    display: inline-block;
+    padding: .5em;
+}
+
+label[for="search"]{
+    display: inline-block;
+    padding: 0em 1em;
+}
+
+#search {
+    padding: .5em 1em;
+}
+
+.btn {
+    padding: .5em;
+    border: darkblue 1px solid;
+    background-color: #83c3d3;
+    border-radius: .5em;
+}
+
+.left-container{
+    display: flex;
+    align-content: center;
+}
+  
