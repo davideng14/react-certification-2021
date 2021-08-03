@@ -9,7 +9,9 @@ import SecretPage from '../../pages/Secret';
 import Private from '../Private';
 import Fortune from '../Fortune';
 import Layout from '../Layout';
+import LayoutWithHeader from '../LayoutWithHeader';
 import { random } from '../../utils/fns';
+import 'antd/dist/antd.css';
 
 function App() {
   useLayoutEffect(() => {
@@ -33,23 +35,27 @@ function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <Layout>
-          <Switch>
-            <Route exact path="/">
+        <Switch>
+          <Route exact path="/">
+            <LayoutWithHeader>
               <HomePage />
-            </Route>
-            <Route exact path="/login">
+            </LayoutWithHeader>
+          </Route>
+          <Route exact path="/login">
+            <Layout>
               <LoginPage />
-            </Route>
-            <Private exact path="/secret">
+            </Layout>
+          </Route>
+          <Private exact path="/secret">
+            <LayoutWithHeader>
               <SecretPage />
-            </Private>
-            <Route path="*">
-              <NotFound />
-            </Route>
-          </Switch>
-          <Fortune />
-        </Layout>
+            </LayoutWithHeader>
+          </Private>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+        <Fortune />
       </AuthProvider>
     </BrowserRouter>
   );
