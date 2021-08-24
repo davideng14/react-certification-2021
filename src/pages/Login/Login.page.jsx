@@ -11,13 +11,13 @@ function LoginPage() {
   function authenticate(event) {
     event.preventDefault();
     login();
-    history.push('/secret');
+    history.push('/');
   }
 
   return (
     <section className="login">
-      <h1>Welcome back!</h1>
-      <form onSubmit={authenticate} className="login-form">
+      <h1>Log in</h1>
+      <form onSubmit={authenticate} className="login-form" data-testid="login-form">
         <div className="form-group">
           <label htmlFor="username">
             <strong>username </strong>

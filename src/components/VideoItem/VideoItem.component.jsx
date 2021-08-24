@@ -1,5 +1,4 @@
 import React from 'react';
-import './VideoItem.styles.css';
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -18,7 +17,7 @@ function VideoItem({ data }) {
     <Button>
       <ImageContainer image={videoData.thumbnails.default.url} />
       <div>
-        <h2>{videoData.title}</h2>
+        <h2 data-testid="videoTitle">{videoData.title}</h2>
         <p>{videoData.description}</p>
       </div>
     </Button>
