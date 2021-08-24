@@ -29,7 +29,7 @@ function HomePage() {
             <VideoItem key={video.id.videoId} data={video} />
           ))}
           <span>
-            <Link to="/" onClick={deAuthenticate}>
+            <Link to="/" onClick={deAuthenticate} data-testid="logout">
               ← logout
             </Link>
           </span>
